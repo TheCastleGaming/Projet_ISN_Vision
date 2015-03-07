@@ -1,8 +1,8 @@
 
-
-/*
+/*
  * Fenetre principale
  * NE SURTOUT PAS UTILISER D'ACCENTS!
+ * Modification reussie!
  */
 import java.awt.Color; 
 import javax.swing. *;
