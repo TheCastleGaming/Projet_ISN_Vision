@@ -1,6 +1,7 @@
 
 /*
  * Fenetre principale
+ * NE SURTOUT PAS UTILISER D'ACCENTS!
  */
 void main() {
 println("test");
