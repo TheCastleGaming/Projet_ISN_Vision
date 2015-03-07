@@ -1,0 +1,10 @@
+
+/*
+ * Fenêtre principale
+ */
+void main() {
+println("test");
+reset (200,200);
+}
+
+
