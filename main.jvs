@@ -1,6 +1,6 @@
 
 /*
- * Fenêtre principale
+ * Fenetre principale
  */
 void main() {
 println("test");
