@@ -3,9 +3,41 @@
  * Fenetre principale
  * NE SURTOUT PAS UTILISER D'ACCENTS!
  */
-void main() {
-println("test");
-reset (1000,800);
-}
+import java.awt.Color; 
+import javax.swing. *;
+import java.awt.event. *;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
 
+
+void main() {
+
+    JFrame fenetre = new JFrame();
+                
+    //Definit un titre pour notre fenetre
+    fenetre.setTitle("Test de vision");
+    //Dfinit sa taille : 400 pixels de large et 100 pixels de haut
+    fenetre.setSize(800, 600);
+    //Nous demandons maintenant a notre objet de se positionner au centre
+    fenetre.setLocationRelativeTo(null);
+    //Termine le processus lorsqu'on clique sur la croix rouge
+    //fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //Et enfin, la rendre visible        
+    fenetre.setVisible(true);
+    //Empecher de redimensionner la fenetre
+    fenetre.setResizable(false);
+	//Creation d'une fenetre de TEXTE
+     JLabel  fen1 = new JLabel();
+	//Positionnement du texte au centre (horizontalement)
+ 	fen1.setHorizontalAlignment(JLabel.CENTER);
+ 	//Postionnement du texte en haut (verticalement)
+	fen1.setVerticalAlignment(JLabel.TOP);
+	//Texte en rouge
+	fen1.setForeground(new Color(255,0,0));
+	//Valeur du texte
+  	fen1.setText("Tests de vision"); 
+  	//Ajout de l'objet texte (JLabel) a la fenetre principale
+  	fenetre.getContentPane().add(fen1);                
+}
 
