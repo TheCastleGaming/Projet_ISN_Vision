@@ -2,6 +2,7 @@
 /*
  * Fenetre principale
  * NE SURTOUT PAS UTILISER D'ACCENTS!
+ * test sur laurent
  */
 import java.awt.Color; 
 import javax.swing. *;
