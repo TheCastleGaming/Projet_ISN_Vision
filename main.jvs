@@ -6,10 +6,22 @@
  */
 import java.awt.Color; 
 import javax.swing. *;
+import javax.swing.JButton;
 import java.awt.event. *;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import javax.swing.JButton;
+import java.awt.Dimension;
 
 
 void main() {
@@ -17,7 +29,7 @@ void main() {
     JFrame fenetre = new JFrame();
                 
     //Definit un titre pour notre fenetre
-    fenetre.setTitle("Test de vision");
+    fenetre.setTitle("Tests de vue");
     //Dfinit sa taille : 400 pixels de large et 100 pixels de haut
     fenetre.setSize(800, 600);
     //Nous demandons maintenant a notre objet de se positionner au centre
@@ -37,8 +49,12 @@ void main() {
 	//Texte en rouge
 	fen1.setForeground(new Color(255,0,0));
 	//Valeur du texte
-  	fen1.setText("Tests de vision"); 
+  	fen1.setText("Tests de vue"); 
   	//Ajout de l'objet texte (JLabel) a la fenetre principale
-  	fenetre.getContentPane().add(fen1);                
+  	fenetre.getContentPane().add(fen1);
+  	JButton button = new JButton("Mon premier bouton");
+ 	button.setPreferredSize(new Dimension(50, 30));
+  	fenetre.add(button);
+
 }
 
