@@ -3,6 +3,7 @@
  * Fenetre principale
  * NE SURTOUT PAS UTILISER D'ACCENTS!
  * test sur laurent
+ * Modification de Laurent!
  */
 import java.awt.Color; 
 import javax.swing. *;
