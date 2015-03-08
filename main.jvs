@@ -52,9 +52,10 @@ void main() {
   	fen1.setText("Tests de vue"); 
   	//Ajout de l'objet texte (JLabel) a la fenetre principale
   	fenetre.getContentPane().add(fen1);
-  	JButton button = new JButton("Mon premier bouton");
- 	button.setPreferredSize(new Dimension(50, 30));
-  	fenetre.add(button);
+	//Champagne a celui que parvient a resize le boutton... 
+  	//JButton button = new JButton("Mon premier bouton");
+ 	//button.setPreferredSize(new Dimension(50, 30));
+  	//fenetre.add(button);
 
 }
 
