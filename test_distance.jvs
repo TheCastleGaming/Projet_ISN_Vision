@@ -1,0 +1,19 @@
+
+void main() {
+   int nombrelettre;
+   println("----Test d'acuité visuelle----");
+   println("Ce test nécessite 2 personnes pour être réalisé.");
+   println("Le \"patient\" indique la lettre qu'il perçoit.");
+   println("Le \"médecin\" rentre la lettre que le patient lui donne.");
+   println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.");
+   println("Indiquer le nombre de lettres à afficher");
+   nombrelettre = readInteger("Nombre de lettres à afficher?");
+   println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
+   println("ATTENTION! Début du test dans 5 secondes!");
+   sleep(5000);
+   while (nombrelettre > 0) {
+      println("Lettre!");
+      nombrelettre = nombrelettre-1;
+   }
+}
+
