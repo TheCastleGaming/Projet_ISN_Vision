@@ -2,10 +2,10 @@
 import java.net.URLEncoder;
 import org.javascool.macros.Macros;
 
-//Test de couleur pour detecter un daltonisme
+//Test de couleur pour détecter un daltonisme
 void test1() {
 }
-//Test d'echelle acuite visuelle pour une distance donnee
+//Test d'échelle acuité visuelle pour une distance donnée
 void test2() {
 }
 //Test d'Ishihara
@@ -13,16 +13,16 @@ void test3() {
 }
 
 void main() {
-   //declaration des variables
+   //déclaration des variables
     int choix = 0;
     //Programme principal
    println("Bonjour!");
-   println("Ce programme, compose de plusieurs tests a pour vocation de depister chez vous une eventuelle anomalie liee a la vue, comme par exemple le daltonisme.");
-   println("Le daltonisme est une anomalie dans laquelle un ou plusieurs des trois types de cones de la retine oculaire, responsables de la perception des couleurs, sont deficients.");
-   println("Habituellement, le daltonisme est classe comme une infirmite legere. Mais il existe aussi des situations ou les daltoniens peuvent avoir un avantage sur les individus ayant une vision normale. Basees sur quelques etudes, il existe des conclusions affirmant que les daltoniens sont plus a même que ceux ayant une vision normale, a percer certains camouflages bases sur la couleur. Cela peut etre une explication evolutive de la frequence étonnament haute de daltonisme rouge-vert congenitale.");
-   println("Vous pouvez realiser les tests suivant:");
+   println("Ce programme, composé de plusieurs tests a pour vocation de dépister chez vous une éventuelle anomalie liée à la vue, comme par exemple le daltonisme.");
+   println("Le daltonisme est une anomalie dans laquelle un ou plusieurs des trois types de cônes de la rétine oculaire, responsables de la perception des couleurs, sont déficients.");
+   println("Habituellement, le daltonisme est classé comme une infirmité légère. Mais il existe aussi des situations où les daltoniens peuvent avoir un avantage sur les individus ayant une vision normale. Basées sur quelques études, il existe des conclusions affirmant que les daltoniens sont plus à même que ceux ayant une vision normale, à percer certains camouflages basés sur la couleur. Cela peut être une explication évolutive de la fréquence étonnament haute de daltonisme rouge-vert congénitale.");
+   println("Vous pouvez réaliser les tests suivant:");
    println("1. Test de couleur pour détecter un daltonisme.");
-   println("2. Test d'ehelle acuité visuelle pour une distance donnee.");
+   println("2. Test d'échelle acuité visuelle pour une distance donnée.");
    println("3. Test d'Ishihara.");
    println("4. Plus d'informations sur le daltonisme.");
    sleep(3000);
