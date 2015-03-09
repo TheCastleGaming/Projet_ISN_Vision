@@ -1,13 +1,16 @@
-//modification julian test
+
 import java.net.URLEncoder;
+
 import org.javascool.macros.Macros;
 
 //Test de couleur pour détecter un daltonisme
 void test1() {
 }
+
 //Test d'échelle acuité visuelle pour une distance donnée
 void test2() {
 }
+
 //Test d'Ishihara
 void test3() {
 }
@@ -15,8 +18,8 @@ void test3() {
 void main() {
    //déclaration des variables
     int choix = 0;
-    //Programme principal
-   println("Bonjour!");
+   //Programme principal
+    println("Bonjour!");
    println("Ce programme, composé de plusieurs tests a pour vocation de dépister chez vous une éventuelle anomalie liée à la vue, comme par exemple le daltonisme.");
    println("Le daltonisme est une anomalie dans laquelle un ou plusieurs des trois types de cônes de la rétine oculaire, responsables de la perception des couleurs, sont déficients.");
    println("Habituellement, le daltonisme est classé comme une infirmité légère. Mais il existe aussi des situations où les daltoniens peuvent avoir un avantage sur les individus ayant une vision normale. Basées sur quelques études, il existe des conclusions affirmant que les daltoniens sont plus à même que ceux ayant une vision normale, à percer certains camouflages basés sur la couleur. Cela peut être une explication évolutive de la fréquence étonnament haute de daltonisme rouge-vert congénitale.");
@@ -26,10 +29,9 @@ void main() {
    println("3. Test d'Ishihara.");
    println("4. Plus d'informations sur le daltonisme.");
    sleep(3000);
-  
-   while(choix != 1 || choix != 2 || choix != 3 || choix != 4)
-   {
-   	 choix = readInteger("Selectionnez votre test ;)");
+   while (choix < 1 || choix >4) {
+      choix = readInteger("Selectionnez votre test ;)");
+   }
    switch(choix) {
       case 1 : test1();
       break;
@@ -39,9 +41,7 @@ void main() {
       break;
       case 4 : Macros.openURL("http://fr.wikipedia.org/wiki/Daltonisme");
       break;
-      default: choix = 0;
-     
-   }
+      default : choix = 0;
    }
 }
 
