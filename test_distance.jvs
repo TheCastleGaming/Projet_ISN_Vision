@@ -1,6 +1,10 @@
 
 void main() {
-   int nombrelettre;
+   reset(400, 300);
+   int nombrelettre, i;
+   String alphabet = "azertyuiopqsdfghjklmwxcvbn";
+   char lettrechar;
+   String lettre;
    println("----Test d'acuité visuelle----");
    println("Ce test nécessite 2 personnes pour être réalisé.");
    println("Le \"patient\" indique la lettre qu'il perçoit.");
@@ -10,10 +14,16 @@ void main() {
    nombrelettre = readInteger("Nombre de lettres à afficher?");
    println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
    println("ATTENTION! Début du test dans 5 secondes!");
-   sleep(5000);
-   while (nombrelettre > 0) {
-      println("Lettre!");
-      nombrelettre = nombrelettre-1;
+   //sleep(5000);
+   
+    while (nombrelettre > 0) {
+      i = random(0, 25);
+      lettrechar = alphabet.charAt(i);
+      lettre = Character.toString(lettrechar);
+      setPixel(0, 0, 255, 0, 0);
+      load("C:/lettre.jpg");
+       nombrelettre = nombrelettre-1;
    }
+   
 }
 
