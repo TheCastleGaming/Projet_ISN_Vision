@@ -6,7 +6,7 @@ void main() {
    int score = 0;
    String alphabet = "azertyuiopqsdfghjklmwxcvbn";
    char lettrechar;
-   String lettre, lettrevue;
+   char lettre, lettrevue;
    println("----Test d'acuité visuelle----");
    println("Ce test nécessite 2 personnes pour être réalisé.");
    println("Le \"patient\" indique la lettre qu'il perçoit.");
@@ -21,18 +21,23 @@ void main() {
     	//génération aléatoire d'une lettre
       i = random(0, 25);
       lettrechar = alphabet.charAt(i);
-      lettre = Character.toString(lettrechar);
+      //lettre = Character.toString(lettrechar);
+      lettre=lettrechar;
       //chargement de la lettre
       load("C:/images/"+niveau+"/"+lettre+".jpg", false, false);
-      lettrevue = readString("Quelle lettre voyez-vous? (en minuscule)");
+      lettrevue = readChar("Quelle lettre voyez-vous? (en minuscule)");
       if (lettre == lettrevue){
-      	niveau--;
+      	niveau=niveau-1;
+      	println("Bonne réponse!");
+      	sleep(500);
       	if (niveau < 1) {
       		niveau = 1;
       	}
       	score++;
       }
       else {
+      	println("Mauvaise réponsé!");
+      	sleep(500);
       	score--;
       }
       nombrelettre = nombrelettre-1;
