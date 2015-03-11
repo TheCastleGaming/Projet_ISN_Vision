@@ -7,7 +7,6 @@ void main() {
    String path = System.getProperty("user.dir");
    char lettrechar;
    char lettre, lettrevue;
-   println(path);
    println("----Test d'acuité visuelle----");
    println("Ce test nécessite 2 personnes pour être réalisé.");
    println("Le \"patient\" indique la lettre qu'il perçoit.");
