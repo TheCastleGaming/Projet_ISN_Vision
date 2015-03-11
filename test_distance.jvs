@@ -37,7 +37,6 @@ void main() {
       } else {
          println("Mauvaise réponse!");
          sleep(500);
-         score--;
       }
       nombrelettre = nombrelettre-1;
    }
