@@ -12,7 +12,7 @@ void main(){
 			rouge[i][j] = 255;
 			vert[i][j] = 0;
 			bleu[i][j] = 0;
-		setPixel(i -128, j -128, rouge[i][j], vert[i][j], bleu[i][j]);
+		setPixel(i -286, j -128, rouge[i][j], vert[i][j], bleu[i][j]);
 		}
 		
 	}
@@ -27,7 +27,7 @@ void main(){
 			rouge2[i][j] = 255;
 			vert2[i][j] = 30;
 			bleu2[i][j] = 0;
-		setPixel(i +30, j -128, rouge2[i][j], vert2[i][j], bleu2[i][j]);
+		setPixel(i -128, j -128, rouge2[i][j], vert2[i][j], bleu2[i][j]);
 		}
 		
 	}
@@ -42,10 +42,26 @@ void main(){
 			rouge3[i][j] = 255;
 			vert3[i][j] = 60;
 			bleu3[i][j] = 0;
-		setPixel(i +188, j -128, rouge3[i][j], vert3[i][j], bleu3[i][j]);
+		setPixel(i +30, j -128, rouge3[i][j], vert3[i][j], bleu3[i][j]);
 		}
 		
 	}
+
+	int o, p;
+	int[][] rouge4 = new int[254][254] ;
+	int[][] vert4 = new int[254][254] ;
+	int[][] bleu4 = new int[254][254] ;
+ 
+	for (i=0; i <=127; i= i +1){
+		for (j =0; j <=127; j = j +1){
+			rouge4[i][j] = 255;
+			vert4[i][j] = 90;
+			bleu4[i][j] = 0;
+		setPixel(i +188, j -128, rouge4[i][j], vert4[i][j], bleu4[i][j]);
+		}
+		
+	}
+
 
 }			
 
