@@ -1,5 +1,6 @@
 
 
+
 void main() {
    int nombrelettre, i;
    int niveau = 8;
@@ -36,7 +37,7 @@ void main() {
       	score++;
       }
       else {
-      	println("Mauvaise réponsé!");
+      	println("Mauvaise réponse!");
       	sleep(500);
       	score--;
       }
