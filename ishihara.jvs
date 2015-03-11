@@ -1,0 +1,31 @@
+
+void main() {
+   //variable
+    int score =0;
+   int nbrimageaudebut;
+   //Programme Principal
+    int nbrimage = readInt("Bonjour, bienvenue sur le test d'Ishihara. Avec combien d'images voulez-vous travailler (entre 0 et 32) ?");
+   if (nbrimage >32) {
+      println("Error, le nombre voulu est trop grand.");
+      nbrimageaudebut = nbrimage;
+   } else {
+      nbrimageaudebut = nbrimage;
+      while (nbrimage >0) {
+         int i = random(0, 32);
+         load("Pictures/Ishihara/" + i + ".jpg");
+         int reponse = readInt("Quelle chiffre voyez-vous?");
+         if (reponse == i) {
+            score = score+1;
+         } else {
+            score = score-1;
+         }
+         nbrimage = nbrimage-1;
+      }
+      if (score / nbrimageaudebut > 0.75) {
+         println("Vous n'êtes pas daltonien");
+      } else {
+         println("Votre score est inférieur à 0.75, vous devriez consulter");
+      }
+   }
+}
+
