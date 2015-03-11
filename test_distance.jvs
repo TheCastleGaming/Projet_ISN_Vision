@@ -1,6 +1,4 @@
 
-
-
 void main() {
    int nombrelettre, i, nbrinitial;
    int niveau = 8;
@@ -20,30 +18,29 @@ void main() {
    println("ATTENTION! Début du test dans 5 secondes!");
    //sleep(5000);
     while (nombrelettre > 0) {
-    	//génération aléatoire d'une lettre
-      i = random(0, 25);
+      //génération aléatoire d'une lettre
+       i = random(0, 25);
       lettrechar = alphabet.charAt(i);
       //lettre = Character.toString(lettrechar);
-      lettre=lettrechar;
+       lettre = lettrechar;
       //chargement de la lettre
-      load("C:/images/"+niveau+"/"+lettre+".jpg", false, false);
+       load("C:/images/" + niveau + "/" + lettre+".jpg", false, false);
       lettrevue = readChar("Quelle lettre voyez-vous? (en minuscule)");
-      if (lettre == lettrevue){
-      	niveau=niveau-1;
-      	println("Bonne réponse!");
-      	sleep(500);
-      	if (niveau < 1) {
-      		niveau = 1;
-      	}
-      	score++;
-      }
-      else {
-      	println("Mauvaise réponse!");
-      	sleep(500);
-      	score--;
+      if (lettre == lettrevue) {
+         niveau = niveau -1;
+         println("Bonne réponse!");
+         sleep(500);
+         if (niveau < 1) {
+            niveau = 1;
+         }
+         score++;
+      } else {
+         println("Mauvaise réponse!");
+         sleep(500);
+         score--;
       }
       nombrelettre = nombrelettre-1;
    }
-   println("Votre score est de "+score+"  réponses justes sur "+nbrinitial+" essais");
+   println("Votre score est de " + score+"  réponses justes sur " + nbrinitial + " essais");
 }
 
