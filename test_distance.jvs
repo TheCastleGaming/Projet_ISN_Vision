@@ -4,8 +4,10 @@ void main() {
    int niveau = 8;
    int score = 0;
    String alphabet = "azertyuiopqsdfghjklmwxcvbn";
+   String path = System.getProperty("user.dir");
    char lettrechar;
    char lettre, lettrevue;
+   println(path);
    println("----Test d'acuité visuelle----");
    println("Ce test nécessite 2 personnes pour être réalisé.");
    println("Le \"patient\" indique la lettre qu'il perçoit.");
@@ -24,7 +26,7 @@ void main() {
       //lettre = Character.toString(lettrechar);
        lettre = lettrechar;
       //chargement de la lettre
-       load("C:/images/" + niveau + "/" + lettre+".jpg", false, false);
+       load(path + "/images/" + niveau + "/" + lettre+".jpg", false, false);
       lettrevue = readChar("Quelle lettre voyez-vous? (en minuscule)");
       if (lettre == lettrevue) {
          niveau = niveau -1;
