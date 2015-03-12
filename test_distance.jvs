@@ -2,7 +2,8 @@
 void main() {
    int nombrelettre, i, nbrinitial;
    int niveau = 8;
-   int score = 0;
+   int erreur = 0;
+   int palier = 1;
    String alphabet = "azertyuiopqsdfghjklmwxcvbn";
    String path = System.getProperty("user.dir");
    char lettrechar;
@@ -13,10 +14,10 @@ void main() {
    println("Le \"médecin\" rentre la lettre que le patient lui donne.");
    println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.");
    println("Indiquer le nombre de lettres à afficher");
-   nombrelettre = readInteger("Nombre de lettres à afficher?");
-   nbrinitial = nombrelettre;
-   println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
-   println("ATTENTION! Début du test dans 5 secondes!");
+   nombrelettre = 20; //readInteger("Nombre de lettres à afficher?");
+    nbrinitial = nombrelettre;
+   //   println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
+    println("ATTENTION! Début du test dans 5 secondes!");
    //sleep(5000);
     while (nombrelettre > 0) {
       //génération aléatoire d'une lettre
@@ -29,18 +30,39 @@ void main() {
       lettrevue = readChar("Quelle lettre voyez-vous? (en minuscule)");
       if (lettre == lettrevue) {
          niveau = niveau -1;
+         palier++;
+         if (palier > 8){
+         	palier = 8;
+         	nombrelettre = 0;
+         }
+         erreur = 0;
          println("Bonne réponse!");
          sleep(500);
          if (niveau < 1) {
             niveau = 1;
          }
-         score++;
       } else {
          println("Mauvaise réponse!");
+         erreur ++;
+         if (erreur >=2) {
+            println("Vous avez fait 2 erreurs!");
+            nombrelettre = 0;
+         }
          sleep(500);
       }
       nombrelettre = nombrelettre-1;
    }
-   println("Votre score est de " + score+"  réponses justes sur " + nbrinitial + " essais");
+      println("Votre avez atteint le palier n°" + palier+".");
+      if (palier > 6){
+      	println("Vous avez une excellente vue! Bravo!");
+      }
+      else if (palier == 6) {
+      	println("Vous avez une bonne vue! C'est bien!");
+      }
+      else {
+      	println("Votre vue peut être corrigée");
+      	int codepostal = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
+      	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal);
+      }
 }
 
