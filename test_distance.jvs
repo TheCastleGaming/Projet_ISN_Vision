@@ -1,5 +1,6 @@
 
-
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 void main() {
    int nombrelettre, i, nbrinitial;
@@ -10,18 +11,21 @@ void main() {
    String path = System.getProperty("user.dir");
    char lettrechar;
    char lettre, lettrevue;
-   println("----Test d'acuité visuelle----");
-   println("Ce test nécessite 2 personnes pour être réalisé.");
-   println("Le \"patient\" indique la lettre qu'il perçoit.");
-   println("Le \"médecin\" rentre la lettre que le patient lui donne.");
-   println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.");
-   println("Veuillez placer le patient à 1 mètre de l'écran.");
+JOptionPane jop1;
+jop1 = new JOptionPane();
+jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes pour être réalisé.\nLe \"patient\" indique la lettre qu'il perçoit.\nLe \"médecin\" rentre la lettre que le patient lui donne.\nSi la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.\nVeuillez placer le patient à 1 mètre de l'écran.\nLe test débutera à la fermeture de cette boîte d'informations.", "----Test d'acuité visuelle----", JOptionPane.INFORMATION_MESSAGE);
+//   println("----Test d'acuité visuelle----");
+//   println("Ce test nécessite 2 personnes pour être réalisé.");
+//   println("Le \"patient\" indique la lettre qu'il perçoit.");
+//   println("Le \"médecin\" rentre la lettre que le patient lui donne.");
+//   println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.");
+//   println("Veuillez placer le patient à 1 mètre de l'écran.");
    //println("Indiquer le nombre de lettres à afficher");
    nombrelettre = 20; //readInteger("Nombre de lettres à afficher?");
     nbrinitial = nombrelettre;
    //   println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
-    println("ATTENTION! Début du test dans 5 secondes!");
-   sleep(5000);
+//    println("ATTENTION! Début du test dans 5 secondes!");
+//   sleep(5000);
     while (nombrelettre > 0) {
       //génération aléatoire d'une lettre
        i = random(0, 25);
