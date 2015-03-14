@@ -1,1 +1,70 @@
-//test de nuance de couleurs
+
+/*
+ * Le repère n'est pas centré, il va de haut en bas et de gauche à droite vers le sens positif */
+ void main() {
+   int x,y,couleur;
+   int level =2;
+   reset(800, 400, false);
+   int[][] rouge = new int[800][400];
+   int[][] vert = new int[800][400];
+   int[][] bleu = new int[800][400];
+   couleur = random(1, 6);
+   switch(couleur) {
+      case 1 : for (x =350; x <450; x ++) {
+         for (y =50; y <=150; y ++) {
+            rouge[x][y] = 255;
+            vert[x][y] =0;
+            bleu[x][y] =0;
+            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+         }
+      }
+      break;
+      case 2 : for (x =350; x <450; x ++) {
+         for (y =50; y <=150; y ++) {
+            rouge[x][y] = 0;
+            vert[x][y] =255;
+            bleu[x][y] =0;
+            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+         }
+      }
+      break;
+      case 3 : for (x =350; x <450; x ++) {
+         for (y =50; y <=150; y ++) {
+            rouge[x][y] = 0;
+            vert[x][y] =0;
+            bleu[x][y] =255;
+            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+         }
+      }
+      break;
+      case 4 : for (x =350; x <450; x ++) {
+         for (y =50; y <=150; y ++) {
+            rouge[x][y] = 255;
+            vert[x][y] =255;
+            bleu[x][y] =0;
+            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+         }
+      }
+      break;
+      case 5 : for (x =350; x <450; x ++) {
+         for (y =50; y <=150; y ++) {
+            rouge[x][y] = 255;
+            vert[x][y] =0;
+            bleu[x][y] =255;
+            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+         }
+      }
+      break;
+      case 6 : for (x =350; x <450; x ++) {
+         for (y =50; y <=150; y ++) {
+            rouge[x][y] = 0;
+            vert[x][y] =255;
+            bleu[x][y] =255;
+            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+         }
+      }
+      break;
+      
+   }
+}
+
