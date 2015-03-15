@@ -1,9 +1,10 @@
 
+import java.awt. *;
+
 /*
  * Le repère n'est pas centré, il va de haut en bas et de gauche à droite vers le sens positif */
  void main() {
    int x,y,couleur;
-   int level =2;
    reset(800, 400, false);
    int[][] rouge = new int[800][400];
    int[][] vert = new int[800][400];
@@ -64,7 +65,12 @@
          }
       }
       break;
-      
+   }
+   //Génération du carré (le plus a gauche) de même couleur que le principal généré au début
+    for (x =200; x <300; x ++) {
+      for (y =250; y <=350; y ++) {
+         setPixel(x, y, rouge[400][100], vert[400][100], bleu[400][100]);
+      }
    }
 }
 
