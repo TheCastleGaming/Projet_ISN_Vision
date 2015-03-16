@@ -9,12 +9,14 @@ import java.awt. *;
  * Le repÃ¨re n'est pas centrÃ©, il va de haut en bas et de gauche Ã  droite vers le sens positif */
  void main() {
    int x,y,couleur;
-   JOptionPane jop5, jop6, jop7;
+   JOptionPane jop5, jop6, jop7, jop8;
    int testfait = 0;
    int bonnereponse = 0;
    int[][] rouge = new int[800][400];
    int[][] vert = new int[800][400];
    int[][] bleu = new int[800][400];
+   jop8 = new JOptionPane();
+   jop8.showMessageDialog(null, "Le jeu suivant a pour but de vérifier si votre oeil détecte correctement les nuances de couleurs.\nUn carré principal s'affiche en haut ainsi qu'une palette de nuance de ce carré.\nVous aurez 10 secondes pour trouver la nuance de ce carré en cliquant dessus.\nCe test sera répété 10 fois.\nLe test débutera à la fermeture de cette fenêtre!\nCOURAGE!", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
    while (testfait <10) {
       reset(800, 400, false);
       couleur = random(1, 6);
