@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 import java.awt. *;
 
 /*
- * Le repÃ¨re n'est pas centrÃ©, il va de haut en bas et de gauche Ã  droite vers le sens positif */
+ * Le repère n'est pas centré, il va de haut en bas et de gauche à droite vers le sens positif */
  void main() {
    int x,y,couleur;
    JOptionPane jop5, jop6, jop7, jop8;
@@ -76,7 +76,7 @@ import java.awt. *;
          }
          break;
       }
-      //GÃ©nÃ©ration du carrÃ© (le plus a gauche) de mÃªme couleur que le principal gÃ©nÃ©rÃ© au dÃ©but
+      //Génération du carré (le plus a gauche) de même couleur que le principal généré au début
        for (x =0; x <160; x ++) {
          for (y =250; y <=350; y ++) {
             setPixel(x, y, rouge[400][100], vert[400][100], bleu[400][100]);
