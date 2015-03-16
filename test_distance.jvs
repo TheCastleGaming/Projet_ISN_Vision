@@ -62,15 +62,11 @@ jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personne
       println("Votre avez atteint le palier n°" + palier+".");
       if (palier > 6){
       	jop2 = new JOptionPane();
-	jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo!", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
-
-      	println("Vous avez une excellente vue! Bravo!");
+	jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo! Vous avez atteint le palier n°" + palier+".", "Résultats!", JOptionPane.INFORMATION_MESSAGE);  	
       }
       else if (palier == 6) {
 jop3 = new JOptionPane();
-	jop3.showMessageDialog(null, "Vous avez une bonne vue! Bravo!", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
-
-      	println("Vous avez une bonne vue! C'est bien!");
+	jop3.showMessageDialog(null, "Vous avez une bonne vue! C'est bien! Vous avez atteint le palier n°6.", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
       }
       else {
       	int codepostal = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
