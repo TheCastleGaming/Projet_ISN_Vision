@@ -11,23 +11,23 @@ void main() {
    String path = System.getProperty("user.dir");
    char lettrechar;
    char lettre, lettrevue;
-JOptionPane jop1;
+JOptionPane jop1, jop2, jop3;
 jop1 = new JOptionPane();
-jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes pour être réalisé.\nLe \"patient\" indique la lettre qu'il perçoit.\nLe \"médecin\" rentre la lettre que le patient lui donne.\nSi la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.\nVeuillez placer le patient à 1 mètre de l'écran.\nLe test débutera à la fermeture de cette boîte d'informations.", "----Test d'acuité visuelle----", JOptionPane.INFORMATION_MESSAGE);
-//   println("----Test d'acuité visuelle----");
-//   println("Ce test nécessite 2 personnes pour être réalisé.");
-//   println("Le \"patient\" indique la lettre qu'il perçoit.");
-//   println("Le \"médecin\" rentre la lettre que le patient lui donne.");
-//   println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.");
-//   println("Veuillez placer le patient à 1 mètre de l'écran.");
-   //println("Indiquer le nombre de lettres à afficher");
-   nombrelettre = 20; //readInteger("Nombre de lettres à afficher?");
+jop1.showMessageDialog(null, "Message informatif:\nCe test nÃ©cessite 2 personnes pour Ãªtre rÃ©alisÃ©.\nLe \"patient\" indique la lettre qu'il perÃ§oit.\nLe \"mÃ©decin\" rentre la lettre que le patient lui donne.\nSi la lecture est correcte, une nouvelle lettre s'affiche mais de taille infÃ©rieure. Sinon, la lettre affichÃ©e est de mÃªme taille.\nVeuillez placer le patient Ã  1 mÃ¨tre de l'Ã©cran.\nLe test dÃ©butera Ã  la fermeture de cette boÃ®te d'informations.", "----Test d'acuitÃ© visuelle----", JOptionPane.INFORMATION_MESSAGE);
+//   println("----Test d'acuitÃ© visuelle----");
+//   println("Ce test nÃ©cessite 2 personnes pour Ãªtre rÃ©alisÃ©.");
+//   println("Le \"patient\" indique la lettre qu'il perÃ§oit.");
+//   println("Le \"mÃ©decin\" rentre la lettre que le patient lui donne.");
+//   println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille infÃ©rieure. Sinon, la lettre affichÃ©e est de mÃªme taille.");
+//   println("Veuillez placer le patient Ã  1 mÃ¨tre de l'Ã©cran.");
+   //println("Indiquer le nombre de lettres Ã  afficher");
+   nombrelettre = 20; //readInteger("Nombre de lettres Ã  afficher?");
     nbrinitial = nombrelettre;
    //   println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
-//    println("ATTENTION! Début du test dans 5 secondes!");
+//    println("ATTENTION! DÃ©but du test dans 5 secondes!");
 //   sleep(5000);
     while (nombrelettre > 0) {
-      //génération aléatoire d'une lettre
+      //gÃ©nÃ©ration alÃ©atoire d'une lettre
        i = random(0, 25);
       lettrechar = alphabet.charAt(i);
       //lettre = Character.toString(lettrechar);
@@ -43,13 +43,13 @@ jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes
          	nombrelettre = 0;
          }
          erreur = 0;
-         println("Bonne réponse!");
+         println("Bonne rÃ©ponse!");
          sleep(500);
          if (niveau < 1) {
             niveau = 1;
          }
       } else {
-         println("Mauvaise réponse!");
+         println("Mauvaise rÃ©ponse!");
          erreur ++;
          if (erreur >=2) {
             println("Vous avez fait 2 erreurs!");
@@ -59,16 +59,21 @@ jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes
       }
       nombrelettre = nombrelettre-1;
    }
-      println("Votre avez atteint le palier n°" + palier+".");
+      println("Votre avez atteint le palier nÂ°" + palier+".");
       if (palier > 6){
+      	jop2 = new JOptionPane();
+	jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo!", "RÃ©sultats!", JOptionPane.INFORMATION_MESSAGE);
+
       	println("Vous avez une excellente vue! Bravo!");
       }
       else if (palier == 6) {
+jop3 = new JOptionPane();
+	jop3.showMessageDialog(null, "Vous avez une bonne vue! Bravo!", "RÃ©sultats!", JOptionPane.INFORMATION_MESSAGE);
+
       	println("Vous avez une bonne vue! C'est bien!");
       }
       else {
-      	println("Votre vue peut être corrigée");
-      	int codepostal = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
+      	int codepostal = readInteger ("Votre vue peut Ãªtre corrigÃ©e, saisissez votre code postal, un opthtalmologiste prÃ¨s de chez vous vous sera communiquÃ©");
       	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal);
       }
 }
