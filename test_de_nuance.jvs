@@ -1,183 +1,211 @@
 
+import javax.swing.ImageIcon;
+
+import javax.swing.JOptionPane;
+
 import java.awt. *;
 
 /*
  * Le repère n'est pas centré, il va de haut en bas et de gauche �  droite vers le sens positif */
  void main() {
    int x,y,couleur;
-   reset(800, 400, false);
+   JOptionPane jop5, jop6, jop7;
+   int testfait = 0;
+   int bonnereponse = 0;
    int[][] rouge = new int[800][400];
    int[][] vert = new int[800][400];
    int[][] bleu = new int[800][400];
-   couleur = random(1, 6);
-   switch(couleur) {
-      case 1 : for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            rouge[x][y] = 255;
-            vert[x][y] =0;
-            bleu[x][y] =0;
-            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+   while (testfait <10) {
+      reset(800, 400, false);
+      couleur = random(1, 6);
+      switch(couleur) {
+         case 1 : for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               rouge[x][y] = 255;
+               vert[x][y] =0;
+               bleu[x][y] =0;
+               setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+            }
+         }
+         break;
+         case 2 : for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               rouge[x][y] = 0;
+               vert[x][y] =255;
+               bleu[x][y] =0;
+               setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+            }
+         }
+         break;
+         case 3 : for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               rouge[x][y] = 0;
+               vert[x][y] =0;
+               bleu[x][y] =255;
+               setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+            }
+         }
+         break;
+         case 4 : for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               rouge[x][y] = 255;
+               vert[x][y] =255;
+               bleu[x][y] =0;
+               setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+            }
+         }
+         break;
+         case 5 : for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               rouge[x][y] = 255;
+               vert[x][y] =0;
+               bleu[x][y] =255;
+               setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+            }
+         }
+         break;
+         case 6 : for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               rouge[x][y] = 0;
+               vert[x][y] =255;
+               bleu[x][y] =255;
+               setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+            }
+         }
+         break;
+      }
+      //Génération du carré (le plus a gauche) de même couleur que le principal généré au début
+       for (x =0; x <160; x ++) {
+         for (y =250; y <=350; y ++) {
+            setPixel(x, y, rouge[400][100], vert[400][100], bleu[400][100]);
          }
       }
-      break;
-      case 2 : for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            rouge[x][y] = 0;
-            vert[x][y] =255;
-            bleu[x][y] =0;
-            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+      for (x =161; x <320; x ++) {
+         for (y =250; y <=350; y ++) {
+            int r_carre2 = rouge[400][100] - 70;
+            int v_carre2 = vert[400][100] - 70;
+            int b_carre2 = bleu[400][100] - 70;
+            if (r_carre2 < 0) {
+               r_carre2 =0;
+            }
+            if (v_carre2 < 0) {
+               v_carre2 =0;
+            }
+            if (b_carre2 < 0) {
+               b_carre2 =0;
+            }
+            setPixel(x, y, r_carre2, v_carre2, b_carre2);
          }
       }
-      break;
-      case 3 : for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            rouge[x][y] = 0;
-            vert[x][y] =0;
-            bleu[x][y] =255;
-            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+      for (x =321; x <480; x ++) {
+         for (y =250; y <=350; y ++) {
+            int r_carre3 = rouge[400][100] - 90;
+            int v_carre3 = vert[400][100] - 90;
+            int b_carre3 = bleu[400][100] - 90;
+            if (r_carre3 < 0) {
+               r_carre3 =0;
+            }
+            if (v_carre3 < 0) {
+               v_carre3 =0;
+            }
+            if (b_carre3 < 0) {
+               b_carre3 =0;
+            }
+            setPixel(x, y, r_carre3, v_carre3, b_carre3);
          }
       }
-      break;
-      case 4 : for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            rouge[x][y] = 255;
-            vert[x][y] =255;
-            bleu[x][y] =0;
-            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+      for (x =481; x <640; x ++) {
+         for (y =250; y <=350; y ++) {
+            int r_carre4 = rouge[400][100] - 120;
+            int v_carre4 = vert[400][100] - 120;
+            int b_carre4 = bleu[400][100] - 120;
+            if (r_carre4 < 0) {
+               r_carre4 =0;
+            }
+            if (v_carre4 < 0) {
+               v_carre4 =0;
+            }
+            if (b_carre4 < 0) {
+               b_carre4 =0;
+            }
+            setPixel(x, y, r_carre4, v_carre4, b_carre4);
          }
       }
-      break;
-      case 5 : for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            rouge[x][y] = 255;
-            vert[x][y] =0;
-            bleu[x][y] =255;
-            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+      for (x =641; x <800; x ++) {
+         for (y =250; y <=350; y ++) {
+            int r_carre5 = rouge[400][100] - 150;
+            int v_carre5 = vert[400][100] - 150;
+            int b_carre5 = bleu[400][100] - 150;
+            if (r_carre5 < 0) {
+               r_carre5 =0;
+            }
+            if (v_carre5 < 0) {
+               v_carre5 =0;
+            }
+            if (b_carre5 < 0) {
+               b_carre5 =0;
+            }
+            setPixel(x, y, r_carre5, v_carre5, b_carre5);
          }
       }
-      break;
-      case 6 : for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            rouge[x][y] = 0;
-            vert[x][y] =255;
-            bleu[x][y] =255;
-            setPixel(x, y, rouge[x][y], vert[x][y], bleu[x][y]);
+      int aleatoire = random(1, 5);
+      switch(aleatoire) {
+         case 1 : int[] couleurcarre1 = getPixelColor(60, 300);
+         for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               setPixel(x, y, couleurcarre1[0], couleurcarre1[1], couleurcarre1[2]);
+            }
          }
+         break;
+         case 2 : int[] couleurcarre2 = getPixelColor(250, 300);
+         for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               setPixel(x, y, couleurcarre2[0], couleurcarre2[1], couleurcarre2[2]);
+            }
+         }
+         break;
+         case 3 : int[] couleurcarre3 = getPixelColor(400, 300);
+         for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               setPixel(x, y, couleurcarre3[0], couleurcarre3[1], couleurcarre3[2]);
+            }
+         }
+         break;
+         case 4 : int[] couleurcarre4 = getPixelColor(600, 300);
+         for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               setPixel(x, y, couleurcarre4[0], couleurcarre4[1], couleurcarre4[2]);
+            }
+         }
+         break;
+         case 5 : int[] couleurcarre5 = getPixelColor(700, 300);
+         for (x =350; x <450; x ++) {
+            for (y =50; y <=150; y ++) {
+               setPixel(x, y, couleurcarre5[0], couleurcarre5[1], couleurcarre5[2]);
+            }
+         }
+         break;
       }
-      break;
+      sleep(10000);
+      int clic_x = getX();
+      int clic_y = getY();
+      while (clic_x < 0 || clic_x > 800 || clic_y < 250 || clic_y > 350) {
+         clic_x = getX();
+         clic_y = getY();
+      }
+      int[] couleurcarreclic = getPixelColor(clic_x, clic_y);
+      int[] couleurcarreprincipal = getPixelColor(400, 100);
+      if (couleurcarreclic[0] == couleurcarreprincipal[0] && couleurcarreclic[1] == couleurcarreprincipal[1] && couleurcarreclic[2] == couleurcarreprincipal[2]) {
+         jop5 = new JOptionPane();
+         jop5.showMessageDialog(null, "BONNE REPONSE!", "R�sultats", JOptionPane.INFORMATION_MESSAGE);
+         bonnereponse++;
+      } else {
+         jop6 = new JOptionPane();
+         jop6.showMessageDialog(null, "MAUVAISE REPONSE!", "R�sultats", JOptionPane.ERROR_MESSAGE);
+      }
+      testfait ++;
    }
-   //Génération du carré (le plus a gauche) de même couleur que le principal généré au début
-    for (x =0; x <160; x ++) {
-      for (y =250; y <=350; y ++) {
-         setPixel(x, y, rouge[400][100], vert[400][100], bleu[400][100]);
-      }
-   }
-   for (x =161; x <320; x ++) {
-      for (y =250; y <=350; y ++) {
-         int r_carre2 = rouge[400][100] - 70;
-         int v_carre2 = vert[400][100] - 70;
-         int b_carre2 = bleu[400][100] - 70;
-         if (r_carre2 < 0) {
-            r_carre2 =0;
-         }
-         if (v_carre2 < 0) {
-            v_carre2 =0;
-         }
-         if (b_carre2 < 0) {
-            b_carre2 =0;
-         }
-         setPixel(x, y, r_carre2, v_carre2, b_carre2);
-      }
-   }
-   for (x =321; x <480; x ++) {
-      for (y =250; y <=350; y ++) {
-         int r_carre3 = rouge[400][100] - 90;
-         int v_carre3 = vert[400][100] - 90;
-         int b_carre3 = bleu[400][100] - 90;
-         if (r_carre3 < 0) {
-            r_carre3 =0;
-         }
-         if (v_carre3 < 0) {
-            v_carre3 =0;
-         }
-         if (b_carre3 < 0) {
-            b_carre3 =0;
-         }
-         setPixel(x, y, r_carre3, v_carre3, b_carre3);
-      }
-   }
-   for (x =481; x <640; x ++) {
-      for (y =250; y <=350; y ++) {
-         int r_carre4 = rouge[400][100] - 120;
-         int v_carre4 = vert[400][100] - 120;
-         int b_carre4 = bleu[400][100] - 120;
-         if (r_carre4 < 0) {
-            r_carre4 =0;
-         }
-         if (v_carre4 < 0) {
-            v_carre4 =0;
-         }
-         if (b_carre4 < 0) {
-            b_carre4 =0;
-         }
-         setPixel(x, y, r_carre4, v_carre4, b_carre4);
-      }
-   }
-   for (x =641; x <800; x ++) {
-      for (y =250; y <=350; y ++) {
-         int r_carre5 = rouge[400][100] - 150;
-         int v_carre5 = vert[400][100] - 150;
-         int b_carre5 = bleu[400][100] - 150;
-         if (r_carre5 < 0) {
-            r_carre5 =0;
-         }
-         if (v_carre5 < 0) {
-            v_carre5 =0;
-         }
-         if (b_carre5 < 0) {
-            b_carre5 =0;
-         }
-         setPixel(x, y, r_carre5, v_carre5, b_carre5);
-      }
-   }
-
-   int aleatoire = random(1, 5);
-   switch(aleatoire) {
-      case 1 : int[] couleurcarre1 = getPixelColor(60, 300);
-      for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            setPixel(x, y, couleurcarre1[0], couleurcarre1[1], couleurcarre1[2]);
-         }
-      }
-      break;
-      case 2 : int[] couleurcarre2 = getPixelColor(250, 300);
-      for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            setPixel(x, y, couleurcarre2[0], couleurcarre2[1], couleurcarre2[2]);
-         }
-      }
-      break;
-      case 3 : int[] couleurcarre3 = getPixelColor(400, 300);
-      for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            setPixel(x, y, couleurcarre3[0], couleurcarre3[1], couleurcarre3[2]);
-         }
-      }
-      break;
-      case 4 : int[] couleurcarre4 = getPixelColor(600, 300);
-      for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            setPixel(x, y, couleurcarre4[0], couleurcarre4[1], couleurcarre4[2]);
-         }
-      }
-      break;
-      case 5 : int[] couleurcarre5 = getPixelColor(700, 300);
-      for (x =350; x <450; x ++) {
-         for (y =50; y <=150; y ++) {
-            setPixel(x, y, couleurcarre5[0], couleurcarre5[1], couleurcarre5[2]);
-         }
-      }
-      break;
-   }
+   jop7 = new JOptionPane();
+   jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) r�ponse(s) sur 10!", "R�sultats", JOptionPane.INFORMATION_MESSAGE);
 }
 
