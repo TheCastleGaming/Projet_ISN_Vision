@@ -7,6 +7,7 @@ import java.util.Random;
 
 void main() {
    //variable
+      String path = System.getProperty("user.dir");
     int score =0;
    int nbrimageaudebut;
    //Programme Principal
@@ -21,7 +22,7 @@ void main() {
          Random random = new Random();
          int pos = random.nextInt(list.size());
          int i = list.get(pos);
-         load("Pictures/Ishihara/" + i + ".jpg");
+         load(path + "/Ishihara/" + i + ".jpg", false, false);
          int reponse = readInt("Quelle chiffre voyez-vous?");
          if (reponse == i) {
             score = score+1;
@@ -31,9 +32,9 @@ void main() {
          nbrimage = nbrimage-1;
       }
       if (score / nbrimageaudebut > 0.75) {
-         println("Vous n'êtes pas daltonien");
+         println("Vous n'Ãªtes pas daltonien");
       } else {
-         println("Votre score est inférieur à 0.75, vous devriez consulter");
+         println("Votre score est infÃ©rieur Ã  0.75, vous devriez consulter");
       }
    }
 }
