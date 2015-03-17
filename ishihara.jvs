@@ -1,5 +1,4 @@
 
-
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import java.util.Arrays;
@@ -9,8 +8,8 @@ import java.util.List;
 import java.util.Random;
 
 void main() {
-   //variables
-   JOptionPane ,jop4;
+   //variable
+   JOptionPane jop4, jop5;
       String path = System.getProperty("user.dir");
     int score =0;
    int nbrimageaudebut;
@@ -37,10 +36,10 @@ void main() {
       }
       if (score / nbrimageaudebut > 0.75) {
          jop4 = new JOptionPane();
-jop4.showMessageDialog(null, "Felicitations! Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+jop4.showMessageDialog(null, "FÃ©licitations! Vous n'Ãªtes pas daltonien!", "RÃ©sultats", JOptionPane.INFORMATION_MESSAGE);
 
       } else {
-       int codepostal2 = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
+       int codepostal2 = readInteger ("Votre vue peut Ãªtre corrigÃ©e, saisissez votre code postal, un opthtalmologiste prÃ¨s de chez vous vous sera communiquÃ©");
       	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal2);
 
       }
