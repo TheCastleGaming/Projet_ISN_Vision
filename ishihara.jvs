@@ -1,5 +1,6 @@
 
 
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import java.util.Arrays;
@@ -14,6 +15,7 @@ void main() {
       String path = System.getProperty("user.dir");
     int score =0;
    int nbrimageaudebut;
+   int palier1=0;
    //Programme Principal
     int nbrimage = readInt("Bonjour, bienvenue sur le test d'Ishihara. Avec combien d'images voulez-vous travailler (entre 0 et 18) ?");
    if (nbrimage >18) {
@@ -22,7 +24,7 @@ void main() {
    } else {
       nbrimageaudebut = nbrimage;
       while (nbrimage >0) {
-         List < Integer > list = Arrays.asList(2, 3, 5, 6, 7, 8, 15, 16, 26, 35, 42, 45, 57, 62, 73, 74, 96, 97);
+         List < Integer > list = Arrays.asList(2, 3, 5, 6, 7, 8, 15, 26, 35, 42, 45, 57, 62, 73, 96, 97);
          Random random = new Random();
          int pos = random.nextInt(list.size());
          int i = list.get(pos);
@@ -30,14 +32,15 @@ void main() {
          int reponse = readInt("Quelle chiffre voyez-vous?");
          if (reponse == i) {
             score = score+1;
+            palier1++;
          } else {
             score = score-1;
          }
          nbrimage = nbrimage-1;
       }
-      if (score / nbrimageaudebut > 0.75) {
+      if (score / nbrimageaudebut > 0.63) {
          jop4 = new JOptionPane();
-jop4.showMessageDialog(null, "Félicitations! Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé "+palier1+" images sur "+nbrimageaudebut+". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
 
       } else {
        int codepostal2 = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
