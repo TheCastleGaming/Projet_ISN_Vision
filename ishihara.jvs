@@ -1,6 +1,7 @@
 
 
 
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import java.util.Arrays;
@@ -29,7 +30,7 @@ void main() {
          int pos = random.nextInt(list.size());
          int i = list.get(pos);
          load(path + "/Ishihara/" + i + ".jpg", false, false);
-         int reponse = readInt("Quelle chiffre voyez-vous?");
+         int reponse = readInt("Quel chiffre voyez-vous?");
          if (reponse == i) {
             score = score+1;
             palier1++;
