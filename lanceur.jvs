@@ -227,7 +227,125 @@ void test1() {
    }
    jop7 = new JOptionPane();
    jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur 10!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+reset(800, 400, false);
+   for (x =100; x <600; x ++) {
+      setPixel(x, 300, 0, 0, 0);
+   }
 
+      for (y =50; y <350; y ++) {
+      setPixel(150, y, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 50, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 75, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 100, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 125, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 150, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 175, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 200, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 225, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 250, 0, 0, 0);
+   }
+
+      for (x =140; x <160; x ++) {
+      setPixel(x, 275, 0, 0, 0);
+   }
+
+
+   if (bonnereponse == 1){
+   	         for (x =200; x <250; x ++) {
+            for (y =275; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 2){
+   	         for (x =200; x <250; x ++) {
+            for (y =250; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 3){
+   	         for (x =200; x <250; x ++) {
+            for (y =225; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 4){
+   	         for (x =200; x <250; x ++) {
+            for (y =200; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 5){
+   	         for (x =200; x <250; x ++) {
+            for (y =175; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 6){
+   	         for (x =200; x <250; x ++) {
+            for (y =150; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 7){
+   	         for (x =200; x <250; x ++) {
+            for (y =125; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 8){
+   	         for (x =200; x <250; x ++) {
+            for (y =100; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 9){
+   	         for (x =200; x <250; x ++) {
+            for (y =75; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
+   else if (bonnereponse == 10){
+   	         for (x =200; x <250; x ++) {
+            for (y =50; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+   }
 }
 
 //Test d'échelle acuité visuelle pour une distance donnée
@@ -340,7 +458,7 @@ void test3() {
          }
          nbrimage = nbrimage-1;
       }
-      if (score / nbrimageaudebut > 0.63) {
+      if (score / nbrimageaudebut >= 2/3) {
          jop4 = new JOptionPane();
 jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé "+palier1+" images sur "+nbrimageaudebut+". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
 
