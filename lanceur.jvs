@@ -23,6 +23,7 @@ void test1() {
    JOptionPane jop5, jop6, jop7, jop8;
    int testfait = 0;
    int bonnereponse = 0;
+   int essai = 0;
    int[][] rouge = new int[800][400];
    int[][] vert = new int[800][400];
    int[][] bleu = new int[800][400];
@@ -211,13 +212,18 @@ void test1() {
       int[] couleurcarreprincipal = getPixelColor(400, 100);
       if (couleurcarreclic[0] == couleurcarreprincipal[0] && couleurcarreclic[1] == couleurcarreprincipal[1] && couleurcarreclic[2] == couleurcarreprincipal[2]) {
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "vrai.wav");
+         essai = 0;
          jop5 = new JOptionPane();
          jop5.showMessageDialog(null, "BONNE REPONSE!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
          bonnereponse++;
       } else {
+         essai = essai + 1;
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
          jop6 = new JOptionPane();
          jop6.showMessageDialog(null, "MAUVAISE REPONSE!", "Résultats", JOptionPane.ERROR_MESSAGE);
+         if (essai >= 5) {
+            testfait =10;
+         }
       }
       testfait ++;
      ;
