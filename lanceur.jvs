@@ -1,9 +1,10 @@
 
-
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
+
 import org.javascool.tools.sound.FileSoundBit;
+
 import javax.swing.ImageIcon;
 
 import javax.swing.JOptionPane;
@@ -15,10 +16,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import java.util.Random;
-
-
-
-
 
 //Test de couleur pour détecter un daltonisme
 void test1() {
@@ -218,134 +215,113 @@ void test1() {
          jop5.showMessageDialog(null, "BONNE REPONSE!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
          bonnereponse++;
       } else {
-      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
+         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
          jop6 = new JOptionPane();
          jop6.showMessageDialog(null, "MAUVAISE REPONSE!", "Résultats", JOptionPane.ERROR_MESSAGE);
       }
       testfait ++;
-      ;
+     ;
    }
    org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
    jop7 = new JOptionPane();
    jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur 10!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
-reset(800, 400, false);
+   reset(800, 400, false);
    for (x =100; x <600; x ++) {
       setPixel(x, 300, 0, 0, 0);
    }
-
-      for (y =50; y <350; y ++) {
+   for (y =50; y <350; y ++) {
       setPixel(150, y, 0, 0, 0);
    }
    for (x =140; x <160; x ++) {
       setPixel(x, 50, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 75, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 100, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 125, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 150, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 175, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 200, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 225, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 250, 0, 0, 0);
    }
-
-      for (x =140; x <160; x ++) {
+   for (x =140; x <160; x ++) {
       setPixel(x, 275, 0, 0, 0);
    }
-
-
-   if (bonnereponse == 1){
-   	         for (x =200; x <250; x ++) {
-            for (y =275; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+   if (bonnereponse == 1) {
+      for (x =200; x <250; x ++) {
+         for (y =275; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 2){
-   	         for (x =200; x <250; x ++) {
-            for (y =250; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 2) {
+      for (x =200; x <250; x ++) {
+         for (y =250; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 3){
-   	         for (x =200; x <250; x ++) {
-            for (y =225; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 3) {
+      for (x =200; x <250; x ++) {
+         for (y =225; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 4){
-   	         for (x =200; x <250; x ++) {
-            for (y =200; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 4) {
+      for (x =200; x <250; x ++) {
+         for (y =200; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 5){
-   	         for (x =200; x <250; x ++) {
-            for (y =175; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 5) {
+      for (x =200; x <250; x ++) {
+         for (y =175; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 6){
-   	         for (x =200; x <250; x ++) {
-            for (y =150; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 6) {
+      for (x =200; x <250; x ++) {
+         for (y =150; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 7){
-   	         for (x =200; x <250; x ++) {
-            for (y =125; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 7) {
+      for (x =200; x <250; x ++) {
+         for (y =125; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 8){
-   	         for (x =200; x <250; x ++) {
-            for (y =100; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 8) {
+      for (x =200; x <250; x ++) {
+         for (y =100; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 9){
-   	         for (x =200; x <250; x ++) {
-            for (y =75; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 9) {
+      for (x =200; x <250; x ++) {
+         for (y =75; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
-   }
-   else if (bonnereponse == 10){
-   	         for (x =200; x <250; x ++) {
-            for (y =50; y <=299; y ++) {
-               setPixel(x, y, 255, 0, 0);
-            }
+      }
+   } else if (bonnereponse == 10) {
+      for (x =200; x <250; x ++) {
+         for (y =50; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
          }
+      }
    }
 }
 
@@ -359,36 +335,25 @@ void test2() {
    String path = System.getProperty("user.dir");
    char lettrechar;
    char lettre, lettrevue;
-JOptionPane jop1, jop2, jop3;
-jop1 = new JOptionPane();
-jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes pour être réalisé.\nLe \"patient\" indique la lettre qu'il perçoit.\nLe \"médecin\" rentre la lettre que le patient lui donne.\nSi la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.\nVeuillez placer le patient à  1 mètre de l'écran.\nLe test débutera à la fermeture de cette boîte d'informations.", "----Test d'acuité visuelle----", JOptionPane.INFORMATION_MESSAGE);
-//   println("----Test d'acuitÃ© visuelle----");
-//   println("Ce test nÃ©cessite 2 personnes pour Ãªtre rÃ©alisÃ©.");
-//   println("Le \"patient\" indique la lettre qu'il perÃ§oit.");
-//   println("Le \"mÃ©decin\" rentre la lettre que le patient lui donne.");
-//   println("Si la lecture est correcte, une nouvelle lettre s'affiche mais de taille infÃ©rieure. Sinon, la lettre affichÃ©e est de mÃªme taille.");
-//   println("Veuillez placer le patient Ã  1 mÃ¨tre de l'Ã©cran.");
-   //println("Indiquer le nombre de lettres Ã  afficher");
-   nombrelettre = 20; //readInteger("Nombre de lettres Ã  afficher?");
-    nbrinitial = nombrelettre;
-   //   println("Vous avez choisi d'afficher " + nombrelettre+" lettres.");
-//    println("ATTENTION! DÃ©but du test dans 5 secondes!");
-//   sleep(5000);
-    while (nombrelettre > 0) {
-      //gÃ©nÃ©ration alÃ©atoire d'une lettre
+   JOptionPane jop1, jop2, jop3;
+   jop1 = new JOptionPane();
+   jop1.showMessageDialog(null, "Message informatif :\nCe test nécessite 2 personnes pour être réalisé.\nLe \"patient\" indique la lettre qu'il perçoit.\nLe \"médecin\" rentre la lettre que le patient lui donne.\nSi la lecture est correcte, une nouvelle lettre s'affiche mais de taille inférieure. Sinon, la lettre affichée est de même taille.\nVeuillez placer le patient à  1 mètre de l'écran.\nLe test débutera à la fermeture de cette boîte d'informations.", "----Test d'acuité visuelle----", JOptionPane.INFORMATION_MESSAGE);
+   nombrelettre = 20;
+   nbrinitial = nombrelettre;
+   while (nombrelettre > 0) {
+      //génération aléatoire d'une lettre
        i = random(0, 25);
       lettrechar = alphabet.charAt(i);
-      //lettre = Character.toString(lettrechar);
-       lettre = lettrechar;
+      lettre = lettrechar;
       //chargement de la lettre
        load(path + "/images/" + niveau + "/" + lettre+".jpg", false, false);
       lettrevue = readChar("Quelle lettre voyez-vous? (en minuscule)");
       if (lettre == lettrevue) {
          niveau = niveau -1;
-         palier++;
-         if (palier > 8){
-         	palier = 8;
-         	nombrelettre = 0;
+         palier ++;
+         if (palier > 8) {
+            palier = 8;
+            nombrelettre = 0;
          }
          erreur = 0;
          println("Bonne réponse!");
@@ -409,34 +374,29 @@ jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes
       }
       nombrelettre = nombrelettre-1;
    }
-      println("Votre avez atteint le palier n°" + palier+".");
-      if (palier > 6){
-      	jop2 = new JOptionPane();
-	jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo! Vous avez atteint le palier n°" + palier+".", "Résultats!", JOptionPane.INFORMATION_MESSAGE);  	
-      }
-      else if (palier == 6) {
-      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
-jop3 = new JOptionPane();
-	jop3.showMessageDialog(null, "Vous avez une bonne vue! C'est bien! Vous avez atteint le palier n°6.", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
-      }
-      else {
-      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
-      	int codepostal = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
-      	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal);
-      }
-
-
+   println("Votre avez atteint le palier n°" + palier + ".");
+   if (palier > 6) {
+      jop2 = new JOptionPane();
+      jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo! Vous avez atteint le palier n°" + palier + ".", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
+   } else if (palier == 6) {
+      org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
+      jop3 = new JOptionPane();
+      jop3.showMessageDialog(null, "Vous avez une bonne vue! C'est bien! Vous avez atteint le palier n°6.", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
+   } else {
+      org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
+      int codepostal = readInteger("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
+      openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal);
+   }
 }
 
 //Test d'Ishihara
 void test3() {
-
    //variable
-   JOptionPane jop4;
-      String path = System.getProperty("user.dir");
-    int score =0;
+    JOptionPane jop4;
+   String path = System.getProperty("user.dir");
+   int score =0;
    int nbrimageaudebut;
-   int palier1=0;
+   int palier1 =0;
    //Programme Principal
     int nbrimage = readInt("Bonjour, bienvenue sur le test d'Ishihara. Avec combien d'images voulez-vous travailler (entre 0 et 18) ?");
    if (nbrimage >18) {
@@ -452,45 +412,34 @@ void test3() {
          load(path + "/Ishihara/" + i + ".jpg", false, false);
          int reponse = readInt("Quel chiffre voyez-vous?");
          if (reponse == i) {
-         	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "vrai.wav");
+            org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "vrai.wav");
             score = score+1;
-            palier1++;
+            palier1 ++;
          } else {
             score = score-1;
             org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
          }
          nbrimage = nbrimage-1;
       }
-      if (score / nbrimageaudebut >= 2/3) {
-      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
+      if (score / nbrimageaudebut >= 2 /3) {
+         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
          jop4 = new JOptionPane();
-jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé "+palier1+" images sur "+nbrimageaudebut+". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
-
+         jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier1 + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
       } else {
-      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
-       int codepostal2 = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
-      	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal2);
-
+         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
+         int codepostal2 = readInteger("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
+         openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal2);
       }
    }
-
 }
-
 
 void main() {
    //déclaration des variables
     int choix = 0;
+   JOptionPane jop9;
    //Programme principal
-    println("Bonjour!");
-   println("Ce programme, composé de plusieurs tests a pour vocation de dépister chez vous une éventuelle anomalie liée à la vue, comme par exemple le daltonisme.");
-   println("Le daltonisme est une anomalie dans laquelle un ou plusieurs des trois types de cônes de la rétine oculaire, responsables de la perception des couleurs, sont déficients.");
-   println("Habituellement, le daltonisme est classé comme une infirmité légère. Mais il existe aussi des situations où les daltoniens peuvent avoir un avantage sur les individus ayant une vision normale. Basées sur quelques études, il existe des conclusions affirmant que les daltoniens sont plus à même que ceux ayant une vision normale, à percer certains camouflages basés sur la couleur. Cela peut être une explication évolutive de la fréquence étonnament haute de daltonisme rouge-vert congénitale.");
-   println("Vous pouvez réaliser les tests suivant:");
-   println("1. Test de couleur pour détecter un daltonisme.");
-   println("2. Test d'échelle acuité visuelle pour une distance donnée.");
-   println("3. Test d'Ishihara.");
-   println("4. Plus d'informations sur le daltonisme.");
-   sleep(3000);
+    jop9 = new JOptionPane();
+   jop9.showMessageDialog(null, "Bonjour!\nCe programme, composé de plusieurs tests a pour vocation de dépister chez vous une éventuelle anomalie liée à la vue, comme par exemple le daltonisme.\nLe daltonisme est une anomalie dans laquelle un ou plusieurs des trois types de cônes de la rétine oculaire, responsables de la perception des couleurs, sont déficients.\nHabituellement, le daltonisme est classé comme une infirmité légère.\nMais il existe aussi des situations où les daltoniens peuvent avoir un avantage sur les individus ayant une vision normale.\nBasées sur quelques études, il existe des conclusions affirmant que les daltoniens sont plus à même que ceux ayant une vision normale,\nà percer certains camouflages basés sur la couleur.\nCela peut être une explication évolutive de la fréquence étonnament haute de daltonisme rouge-vert congénitale.\nVous pouvez réaliser les tests suivant:\n1. Test de couleur pour détecter un daltonisme.\n2. Test d'échelle acuité visuelle pour une distance donnée.\n3. Test d'Ishihara.\n4. Plus d'informations sur le daltonisme.\nAppuyer sur Ok et saissiser votre choix ;)", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
    while (choix < 1 || choix >4) {
       choix = readInteger("Selectionnez votre test");
    }
