@@ -225,6 +225,7 @@ void test1() {
       testfait ++;
       ;
    }
+   org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
    jop7 = new JOptionPane();
    jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur 10!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
 reset(800, 400, false);
@@ -414,10 +415,12 @@ jop1.showMessageDialog(null, "Message informatif:\nCe test nécessite 2 personnes
 	jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo! Vous avez atteint le palier n°" + palier+".", "Résultats!", JOptionPane.INFORMATION_MESSAGE);  	
       }
       else if (palier == 6) {
+      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
 jop3 = new JOptionPane();
 	jop3.showMessageDialog(null, "Vous avez une bonne vue! C'est bien! Vous avez atteint le palier n°6.", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
       }
       else {
+      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
       	int codepostal = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
       	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal);
       }
@@ -459,10 +462,12 @@ void test3() {
          nbrimage = nbrimage-1;
       }
       if (score / nbrimageaudebut >= 2/3) {
+      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
          jop4 = new JOptionPane();
 jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé "+palier1+" images sur "+nbrimageaudebut+". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
 
       } else {
+      	org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
        int codepostal2 = readInteger ("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué");
       	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite="+codepostal2);
 
