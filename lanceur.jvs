@@ -1,6 +1,4 @@
 
-
-
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
@@ -31,7 +29,7 @@ void test1() {
    int[][] bleu = new int[800][400];
    String path = System.getProperty("user.dir");
    jop8 = new JOptionPane();
-   jop8.showMessageDialog(null, "Le jeu suivant a pour but de vérifier si votre oeil détecte correctement les nuances de couleurs.\nUn carré principal s'affiche en haut ainsi qu'une palette de nuance de ce carré.\nVous aurez 10 secondes pour trouver la nuance de ce carré en cliquant dessus.\nCe test sera répété 10 fois.\nLe test débutera à la fermeture de cette fenêtre!\nCOURAGE!", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
+   jop8.showMessageDialog(null, "Le jeu suivant a pour but de vérifier si votre oeil détecte correctement les nuances de couleurs.\nUn carré principal s'affiche en haut ainsi qu'une palette de nuance de ce carré.\nVous aurez 10 secondes pour trouver la nuance de ce carré en cliquant dessus.\nCe test sera répété 10 fois.\nLe test débutera à la fermeture de cette fenêtre!\nN'oubliez pas de redimensionner la fenêtre pour voir toutes les nuances!\nCOURAGE!", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
    while (testfait <10) {
       reset(800, 400, false);
       couleur = random(1, 6);
@@ -332,7 +330,7 @@ void test1() {
       }
    }
    sleep(10000);
-   main();
+   main();
 }
 
 //Test d'échelle acuité visuelle pour une distance donnée
@@ -395,12 +393,11 @@ void test2() {
    } else {
       org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
       int codepostal = readInteger("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué (-1 pour retourner au menu)");
-         if (codepostal== -1){
-         	main();
-         }
-         else{
-         	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal);
-         }
+      if (codepostal == -1) {
+         main();
+      } else {
+         openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal);
+      }
    }
 }
 
@@ -441,17 +438,14 @@ void test3() {
          jop4 = new JOptionPane();
          jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier1 + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
          main();
-
       } else {
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
          int codepostal2 = readInteger("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué (-1 pour retourner au menu)");
-         if (codepostal2== -1){
-         	main();
+         if (codepostal2 == -1) {
+            main();
+         } else {
+            openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal2);
          }
-         else{
-         	openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal2);
-         }
-         
       }
    }
 }
@@ -462,8 +456,8 @@ void main() {
    String path2 = System.getProperty("user.dir");
    JOptionPane jop9, jop10;
    //Programme principal
-   org.javascool.tools.sound.FileSoundBit.play(path2 + "/son/" + "menu.wav");
-    jop9 = new JOptionPane();
+    org.javascool.tools.sound.FileSoundBit.play(path2 + "/son/" + "menu.wav");
+   jop9 = new JOptionPane();
    jop9.showMessageDialog(null, "Bonjour!\nCe programme, composé de plusieurs tests a pour vocation de dépister chez vous une éventuelle anomalie liée à la vue, comme par exemple le daltonisme.\nLe daltonisme est une anomalie dans laquelle un ou plusieurs des trois types de cônes de la rétine oculaire, responsables de la perception des couleurs, sont déficients.\nHabituellement, le daltonisme est classé comme une infirmité légère.\nMais il existe aussi des situations où les daltoniens peuvent avoir un avantage sur les individus ayant une vision normale.\nBasées sur quelques études, il existe des conclusions affirmant que les daltoniens sont plus à même que ceux ayant une vision normale,\nà percer certains camouflages basés sur la couleur.\nCela peut être une explication évolutive de la fréquence étonnament haute de daltonisme rouge-vert congénitale.\nVous pouvez réaliser les tests suivant:\n1. Test de couleur pour détecter un daltonisme.\n2. Test d'échelle acuité visuelle pour une distance donnée.\n3. Test d'Ishihara.\n4. Plus d'informations sur le daltonisme.\n5. Un ophtalmologiste près de chez vous ;)\n6. Quitter\nCrédit musiques: themushroomkingdom.net\nActiver le son, appuyer sur OK et saissiser votre choix ;)", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
    while (choix < 1 || choix >6) {
       choix = readInteger("Selectionnez votre test");
@@ -477,16 +471,13 @@ void main() {
       break;
       case 4 : Macros.openURL("http://fr.wikipedia.org/wiki/Daltonisme");
       break;
-      case 5 : 
-      int codepostal3 = readInteger ("Saissisez votre code postal (exemple: 64000)");
+      case 5 : int codepostal3 = readInteger("Saissisez votre code postal (exemple: 64000)");
       Macros.openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal3);
       break;
-      case 6 : 
-      jop10 = new JOptionPane();
-   jop10.showMessageDialog(null, "MERCI!", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
+      case 6 : jop10 = new JOptionPane();
+      jop10.showMessageDialog(null, "MERCI!", "INFORMATIONS", JOptionPane.INFORMATION_MESSAGE);
       System.exit(0);
       break;
-
       default : choix = 0;
    }
 }
