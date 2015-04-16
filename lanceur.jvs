@@ -1,4 +1,5 @@
 
+
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
@@ -22,6 +23,7 @@ void test1() {
    int x,y,couleur;
    JOptionPane jop5, jop6, jop7, jop8;
    int testfait = 0;
+   int testreal = 0;
    int bonnereponse = 0;
    int essai = 0;
    int[][] rouge = new int[800][400];
@@ -216,6 +218,7 @@ void test1() {
          jop5 = new JOptionPane();
          jop5.showMessageDialog(null, "BONNE REPONSE!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
          bonnereponse++;
+         testreal++;
       } else {
          essai = essai + 1;
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
@@ -224,13 +227,14 @@ void test1() {
          if (essai >= 5) {
             testfait =10;
          }
+         testreal++;
       }
       testfait ++;
      ;
    }
    org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
    jop7 = new JOptionPane();
-   jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur 10! Appuyer sur OK pour obtenir le diagramme de vos résultats!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+   jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur "+testreal+"! Appuyer sur OK pour obtenir le diagramme de vos résultats!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
    reset(800, 400, false);
    for (x =100; x <600; x ++) {
       setPixel(x, 300, 0, 0, 0);
