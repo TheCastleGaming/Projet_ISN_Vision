@@ -564,18 +564,14 @@ sleep(10000);
 //Test d'Ishihara
 void test3() {
    //variable
+      int x,y;
     JOptionPane jop4;
    String path = System.getProperty("user.dir");
    int score =0;
-   int nbrimageaudebut;
+   int nbrimageaudebut = 10;
    int palier1 =0;
    //Programme Principal
-    int nbrimage = readInt("Bonjour, bienvenue sur le test d'Ishihara. Avec combien d'images voulez-vous travailler (entre 0 et 18) ?");
-   if (nbrimage >18) {
-      println("Error, le nombre voulu est trop grand.");
-      nbrimageaudebut = nbrimage;
-   } else {
-      nbrimageaudebut = nbrimage;
+     int nbrimage = 10;
       while (nbrimage >0) {
          List < Integer > list = Arrays.asList(2, 3, 5, 6, 7, 8, 15, 26, 35, 42, 45, 57, 62, 73, 96, 97);
          Random random = new Random();
@@ -593,7 +589,109 @@ void test3() {
          }
          nbrimage = nbrimage-1;
       }
-      if (score / nbrimageaudebut >= 2 /3) {
+
+   reset(800, 400, false);
+   for (x =100; x <600; x ++) {
+      setPixel(x, 300, 0, 0, 0);
+   }
+   for (y =50; y <350; y ++) {
+      setPixel(150, y, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 50, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 75, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 100, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 125, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 150, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 175, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 200, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 225, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 250, 0, 0, 0);
+   }
+   for (x =140; x <160; x ++) {
+      setPixel(x, 275, 0, 0, 0);
+   }
+   if (palier1 == 1) {
+      for (x =200; x <250; x ++) {
+         for (y =275; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 2) {
+      for (x =200; x <250; x ++) {
+         for (y =250; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 3) {
+      for (x =200; x <250; x ++) {
+         for (y =225; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 4) {
+      for (x =200; x <250; x ++) {
+         for (y =200; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 5) {
+      for (x =200; x <250; x ++) {
+         for (y =175; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 6) {
+      for (x =200; x <250; x ++) {
+         for (y =150; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 7) {
+      for (x =200; x <250; x ++) {
+         for (y =125; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 8) {
+      for (x =200; x <250; x ++) {
+         for (y =100; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 9) {
+      for (x =200; x <250; x ++) {
+         for (y =75; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   } else if (palier1 == 10) {
+      for (x =200; x <250; x ++) {
+         for (y =50; y <=299; y ++) {
+            setPixel(x, y, 255, 0, 0);
+         }
+      }
+   }
+   save(path + "/resultats/test_ishihara.pgn");
+   sleep(10000);
+
+      if ((palier1 / nbrimageaudebut) >= 0.6) {
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
          jop4 = new JOptionPane();
          jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier1 + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
@@ -607,7 +705,6 @@ void test3() {
             openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal2);
          }
       }
-   }
 }
 
 void main() {
