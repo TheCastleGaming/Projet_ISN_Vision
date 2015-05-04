@@ -1,7 +1,4 @@
 
-
-
-
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
@@ -220,7 +217,7 @@ void test1() {
          jop5 = new JOptionPane();
          jop5.showMessageDialog(null, "BONNE REPONSE!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
          bonnereponse++;
-         testreal++;
+         testreal ++;
       } else {
          essai = essai + 1;
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
@@ -229,14 +226,14 @@ void test1() {
          if (essai >= 5) {
             testfait =10;
          }
-         testreal++;
+         testreal ++;
       }
       testfait ++;
      ;
    }
    org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
    jop7 = new JOptionPane();
-   jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur "+testreal+"! Appuyer sur OK pour obtenir le diagramme de vos résultats!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+   jop7.showMessageDialog(null, "Vous avez " + bonnereponse+" bonne(s) réponse(s) sur " + testreal + "! Appuyer sur OK pour obtenir le diagramme de vos résultats!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
    reset(800, 400, false);
    for (x =100; x <600; x ++) {
       setPixel(x, 300, 0, 0, 0);
@@ -394,165 +391,162 @@ void test2() {
    if (palier > 6) {
       jop2 = new JOptionPane();
       jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo! Vous avez atteint le palier n°" + palier + ".", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
-reset(800, 400, false);
-   for (x =100; x <600; x ++) {
-      setPixel(x, 300, 0, 0, 0);
-   }
-   for (y =50; y <350; y ++) {
-      setPixel(150, y, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 100, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 125, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 150, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 175, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 200, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 225, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 250, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 275, 0, 0, 0);
-   }
- if (palier == 7) {
-      for (x =200; x <250; x ++) {
-         for (y =125; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
+      reset(800, 400, false);
+      for (x =100; x <600; x ++) {
+         setPixel(x, 300, 0, 0, 0);
+      }
+      for (y =50; y <350; y ++) {
+         setPixel(150, y, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 100, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 125, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 150, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 175, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 200, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 225, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 250, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 275, 0, 0, 0);
+      }
+      if (palier == 7) {
+         for (x =200; x <250; x ++) {
+            for (y =125; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+      } else if (palier == 8) {
+         for (x =200; x <250; x ++) {
+            for (y =100; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
          }
       }
-   } else if (palier == 8) {
-      for (x =200; x <250; x ++) {
-         for (y =100; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
-         }
-      }
-   }
-   save(path + "/resultats/test_acuite.pgn");
-sleep(10000);
-   main();
-
+      save(path + "/resultats/test_acuite.pgn");
+      sleep(10000);
+      main();
    } else if (palier == 6) {
       org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
       jop3 = new JOptionPane();
       jop3.showMessageDialog(null, "Vous avez une bonne vue! C'est bien! Vous avez atteint le palier n°6.", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
-reset(800, 400, false);
-   for (x =100; x <600; x ++) {
-      setPixel(x, 300, 0, 0, 0);
-   }
-   for (y =50; y <350; y ++) {
-      setPixel(150, y, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 100, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 125, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 150, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 175, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 200, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 225, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 250, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 275, 0, 0, 0);
-   }
-for (x =200; x <250; x ++) {
+      reset(800, 400, false);
+      for (x =100; x <600; x ++) {
+         setPixel(x, 300, 0, 0, 0);
+      }
+      for (y =50; y <350; y ++) {
+         setPixel(150, y, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 100, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 125, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 150, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 175, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 200, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 225, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 250, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 275, 0, 0, 0);
+      }
+      for (x =200; x <250; x ++) {
          for (y =150; y <=299; y ++) {
             setPixel(x, y, 255, 0, 0);
          }
       }
-   save(path + "/resultats/test_acuite.pgn");
-sleep(10000);
-   main();
-
-   
+      save(path + "/resultats/test_acuite.pgn");
+      sleep(10000);
+      main();
    } else {
       org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
-reset(800, 400, false);
-   for (x =100; x <600; x ++) {
-      setPixel(x, 300, 0, 0, 0);
-   }
-   for (y =50; y <350; y ++) {
-      setPixel(150, y, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 100, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 125, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 150, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 175, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 200, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 225, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 250, 0, 0, 0);
-   }
-   for (x =140; x <160; x ++) {
-      setPixel(x, 275, 0, 0, 0);
-   }
-   if (palier == 1) {
-      for (x =200; x <250; x ++) {
-         for (y =275; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
+      reset(800, 400, false);
+      for (x =100; x <600; x ++) {
+         setPixel(x, 300, 0, 0, 0);
+      }
+      for (y =50; y <350; y ++) {
+         setPixel(150, y, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 100, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 125, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 150, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 175, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 200, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 225, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 250, 0, 0, 0);
+      }
+      for (x =140; x <160; x ++) {
+         setPixel(x, 275, 0, 0, 0);
+      }
+      if (palier == 1) {
+         for (x =200; x <250; x ++) {
+            for (y =275; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+      } else if (palier == 2) {
+         for (x =200; x <250; x ++) {
+            for (y =250; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+      } else if (palier == 3) {
+         for (x =200; x <250; x ++) {
+            for (y =225; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+      } else if (palier == 4) {
+         for (x =200; x <250; x ++) {
+            for (y =200; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
+         }
+      } else if (palier == 5) {
+         for (x =200; x <250; x ++) {
+            for (y =175; y <=299; y ++) {
+               setPixel(x, y, 255, 0, 0);
+            }
          }
       }
-   } else if (palier == 2) {
-      for (x =200; x <250; x ++) {
-         for (y =250; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
-         }
-      }
-   } else if (palier == 3) {
-      for (x =200; x <250; x ++) {
-         for (y =225; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
-         }
-      }
-   } else if (palier == 4) {
-      for (x =200; x <250; x ++) {
-         for (y =200; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
-         }
-      }
-   } else if (palier == 5) {
-      for (x =200; x <250; x ++) {
-         for (y =175; y <=299; y ++) {
-            setPixel(x, y, 255, 0, 0);
-         }
-      }
-   }
-   save(path + "/resultats/test_acuite.pgn");
-sleep(10000);
+      save(path + "/resultats/test_acuite.pgn");
+      sleep(10000);
       int codepostal = readInteger("Palier " + palier + "!. Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué (-1 pour retourner au menu)");
       if (codepostal == -1) {
          main();
@@ -565,32 +559,31 @@ sleep(10000);
 //Test d'Ishihara
 void test3() {
    //variable
-      int x,y;
-    JOptionPane jop4;
+    int x,y;
+   JOptionPane jop4;
    String path = System.getProperty("user.dir");
    int score =0;
    double nbrimageaudebut1 = 10;
    double palier1 =0;
    //Programme Principal
-     int nbrimage = 10;
-      while (nbrimage >0) {
-         List < Integer > list = Arrays.asList(2, 3, 5, 6, 7, 8, 15, 26, 35, 42, 45, 57, 62, 73, 96, 97);
-         Random random = new Random();
-         int pos = random.nextInt(list.size());
-         int i = list.get(pos);
-         load(path + "/Ishihara/" + i + ".jpg", false, false);
-         int reponse = readInt("Quel chiffre voyez-vous?");
-         if (reponse == i) {
-            org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "vrai.wav");
-            score = score+1;
-            palier1 ++;
-         } else {
-            score = score-1;
-            org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
-         }
-         nbrimage = nbrimage-1;
+    int nbrimage = 10;
+   while (nbrimage >0) {
+      List < Integer > list = Arrays.asList(2, 3, 5, 6, 7, 8, 15, 26, 35, 42, 45, 57, 62, 73, 96, 97);
+      Random random = new Random();
+      int pos = random.nextInt(list.size());
+      int i = list.get(pos);
+      load(path + "/Ishihara/" + i + ".jpg", false, false);
+      int reponse = readInt("Quel chiffre voyez-vous?");
+      if (reponse == i) {
+         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "vrai.wav");
+         score = score+1;
+         palier1 ++;
+      } else {
+         score = score-1;
+         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "faux.wav");
       }
-
+      nbrimage = nbrimage-1;
+   }
    reset(800, 400, false);
    for (x =100; x <600; x ++) {
       setPixel(x, 300, 0, 0, 0);
@@ -691,24 +684,23 @@ void test3() {
    }
    save(path + "/resultats/test_ishihara.pgn");
    sleep(10000);
-   double division = palier1/nbrimageaudebut1;
-
-      if (division > 0.6) {
+   double division = palier1 / nbrimageaudebut1;
+   if (division > 0.6) {
       int palier = (int)palier1;
-      int nbrimageaudebut=(int)nbrimageaudebut1;
-         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
-         jop4 = new JOptionPane();
-         jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+      int nbrimageaudebut = (int)nbrimageaudebut1;
+      org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
+      jop4 = new JOptionPane();
+      jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+      main();
+   } else {
+      org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
+      int codepostal2 = readInteger("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué (-1 pour retourner au menu)");
+      if (codepostal2 == -1) {
          main();
       } else {
-         org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
-         int codepostal2 = readInteger("Votre vue peut être corrigée, saisissez votre code postal, un opthtalmologiste près de chez vous vous sera communiqué (-1 pour retourner au menu)");
-         if (codepostal2 == -1) {
-            main();
-         } else {
-            openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal2);
-         }
+         openURL("http://www.opticiensenfrance.com/recherche?type=practicien_ophtalmologiste&tid=All&localite=" + codepostal2);
       }
+   }
 }
 
 void main() {
