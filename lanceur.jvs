@@ -1,6 +1,7 @@
 
 
 
+
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
@@ -568,8 +569,8 @@ void test3() {
     JOptionPane jop4;
    String path = System.getProperty("user.dir");
    int score =0;
-   int nbrimageaudebut = 10;
-   int palier1 =0;
+   double nbrimageaudebut1 = 10;
+   double palier1 =0;
    //Programme Principal
      int nbrimage = 10;
       while (nbrimage >0) {
@@ -690,11 +691,14 @@ void test3() {
    }
    save(path + "/resultats/test_ishihara.pgn");
    sleep(10000);
+   double division = palier1/nbrimageaudebut1;
 
-      if ((palier1 / nbrimageaudebut) >= 0.6) {
+      if (division > 0.6) {
+      int palier = (int)palier1;
+      int nbrimageaudebut=(int)nbrimageaudebut1;
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
          jop4 = new JOptionPane();
-         jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier1 + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
+         jop4.showMessageDialog(null, "Félicitations! Vous avez trouvé " + palier + " images sur " + nbrimageaudebut + ". Vous n'êtes pas daltonien!", "Résultats", JOptionPane.INFORMATION_MESSAGE);
          main();
       } else {
          org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
