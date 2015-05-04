@@ -1,5 +1,6 @@
 
 
+
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
@@ -333,6 +334,7 @@ void test1() {
          }
       }
    }
+   save(path + "/resultats/test_nuance.pgn");
    sleep(10000);
    main();
 }
