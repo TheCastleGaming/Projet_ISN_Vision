@@ -8,7 +8,7 @@ font-family: sans-serif;
 html { 
   margin:0;
   padding:0;
-  background: url(fond.jpg) no-repeat center fixed; 
+  background: url(../fond.jpg) no-repeat center fixed; 
   -webkit-background-size: cover; 
   background-size: cover; 
 }
