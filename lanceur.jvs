@@ -1,5 +1,12 @@
 
-
+/*
+ * © Lycée Jacques Monod
+ * BUFFET Laurent, CHARLOT Julian, LAMANT Louis
+ * Projet ISN Vision
+ * http://thecastlegaming.github.io/Projet_ISN_Vision/
+ * Modifications autorisées dans le cadre scolaire uniquement
+ * Toute utilisation commerciale est strictement interdite sous peine de poursuites judiciaires
+ */
 import java.net.URLEncoder;
 
 import org.javascool.macros.Macros;
