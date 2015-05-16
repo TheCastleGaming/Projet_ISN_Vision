@@ -1,4 +1,5 @@
 
+
 /*
  * © Lycée Jacques Monod
  * BUFFET Laurent, CHARLOT Julian, LAMANT Louis
@@ -397,6 +398,7 @@ void test2() {
    }
    println("Votre avez atteint le palier n°" + palier + ".");
    if (palier > 6) {
+   	 org.javascool.tools.sound.FileSoundBit.play(path + "/son/" + "end.wav");
       jop2 = new JOptionPane();
       jop2.showMessageDialog(null, "Vous avez une excellente vue! Bravo! Vous avez atteint le palier n°" + palier + ".", "Résultats!", JOptionPane.INFORMATION_MESSAGE);
       reset(800, 400, false);
